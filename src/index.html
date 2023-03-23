@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://kit.fontawesome.com/20471f38a7.js" crossorigin="anonymous"></script>
+        <script defer src="https://cdnjs.cloudflare.com/ajax/libs/skycons/1396634940/skycons.min.js" integrity="sha256-tZNzlXmrMrO9BLT6Gv4Y0LfAN8HdbZ7+LIuNf6WkFC0=" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="style.css">
+        <script defer src="index.js"></script>
+        <title>Weather App</title> 
+    </head>
+    <body>
+        <div class="container">
+            <div class="header">
+                <div class="icon-container">
+                    <img src="" alt=".">
+                </div>
+            </div>
+            <div class="content">
+                <div class="general-information">
+                    <div class="status" data-status>Enter a location</div>
+                    <br /> 
+                    <div class="location" data-location>To find the weather</div>
+                    <div class="unit">
+                        <label for="cel">°C</label>
+                        <input type="radio" id="cel" name="unit" checked />
+                        <button class="unit-toggle" data-unit-toggle></button>
+                        <label for="fah">°F</label>
+                        <input type="radio" id="fah" name="unit" />
+                    </div>
+                </div>
+                <div class="detail-section">
+                    <div class="detail">
+                        <canvas id="wind" width="100" height="100"></canvas>
+                        <div class="title">Wind</div>
+                        <div class="value" data-wind="">TBD</div>
+                        <div class="value" data-wind-dir=""></div>
+                    </div>
+                    <div class="detail bordered">
+                        <canvas id="temp" width="100" height="100"></canvas>
+                        <div class="title">Wind</div>
+                        <div class="value" data-temperature>TBD</div>
+                        <div class="value" data-real-temp></div>
+                    </div>
+                    <div class="detail bordered">
+                        <canvas id="hum" width="100" height="100"></canvas>
+                        <div class="title">Humidity</div>
+                        <div id="single" class="value" data-humidity>TBD</div>
+                        <div id="hide" class="value"></div>
+                    </div>
+                    <div class="detail bordered">
+                        <canvas id="pressure" width="100" height="100"></canvas>
+                        <div class="title">Pressure</div>
+                        <div id="single" class="value" data-pressure>TBD</div>
+                        <div id="hide" class="value"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="city-search-container">
+                <input type="text" class="city-search" data-city-search placeholder="Enter Location" /> 
+                <button class="city-search-button" type="submit">
+                    <i class="fas fa-search"></i>
+                </button>
+            </div>
+        </div>
+    </body>
+</html>
